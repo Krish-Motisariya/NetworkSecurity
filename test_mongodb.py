@@ -1,6 +1,6 @@
 from pymongo.mongo_client import MongoClient
 
-uri = "mongodb+srv://youtubepy:Admin123@youtube.rels4.mongodb.net/?retryWrites=true&w=majority&appName=youtube"
+uri = "mongodb+srv://youtubepy:<@password>@youtube.rels4.mongodb.net/?retryWrites=true&w=majority&appName=youtube"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
