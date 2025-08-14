@@ -1,0 +1,10 @@
+artifact_location: file:///D:/udemy_final/material_from_course/MLProject_NetworkSecurity/mlruns/0/models/m-854858589ef744bf97745ea2d3eb8c66/artifacts
+creation_timestamp: 1755165009134
+experiment_id: '0'
+last_updated_timestamp: 1755165014864
+model_id: m-854858589ef744bf97745ea2d3eb8c66
+model_type: null
+name: model
+source_run_id: 31b081bb0a4e42ef959e6b8f10b4315f
+status: 2
+status_message: null

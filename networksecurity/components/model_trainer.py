@@ -23,6 +23,9 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
 )
 
+import dagshub
+# dagshub.init(repo_owner='Krish-Motisariya', repo_name='NetworkSecurity', mlflow=True)
+
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
         try:
@@ -40,7 +43,14 @@ class ModelTrainer:
             mlflow.log_metric("f1_score", f1_score)
             mlflow.log_metric("precision", precision_score)
             mlflow.log_metric("recall_score", recall_score)
-            mlflow.sklearn.log_model(best_model, "model")
+            mlflow.sklearn.log_model(best_model, "model") #this is by Krish Naik
+
+            #save model locally on machine itself
+            # model_path = "artifacts_by_chatgpt/best_model"
+            # mlflow.sklearn.save_model(best_model, model_path)
+
+            #logging the local model to dagshub
+            # mlflow.log_artifact(model_path, artifact_path="model")
 
         
     def train_model(self, x_train, y_train, x_test, y_test):
@@ -109,6 +119,8 @@ class ModelTrainer:
 
             Network_Model = NetworkModel(processor=preprocessor, model=best_model)
             save_object(file_path=self.model_trainer_config.trained_model_file_path, obj=Network_Model)
+
+            save_object("final_model/model.pkl  ", best_model)
 
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,

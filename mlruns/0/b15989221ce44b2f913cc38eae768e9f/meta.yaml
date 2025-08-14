@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/udemy_final/material_from_course/MLProject_NetworkSecurity/mlruns/0/b15989221ce44b2f913cc38eae768e9f/artifacts
+end_time: 1755165008523
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b15989221ce44b2f913cc38eae768e9f
+run_name: bouncy-lark-521
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755164996459
+status: 3
+tags: []
+user_id: Admin
